@@ -2,63 +2,39 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-/**
- * _printf - Prints formatted output to stdout.
- * @format: A format string.
- *
- * Return: The number of characters printed (excluding the null byte used to end output to strings).
- */
-int _printf(const char *format, ...)
-{
+int _printf(const char *format, ...) {
 	va_list args;
-	int i, count = 0;
-	char *str_arg;
-	char char_arg;
+	int count = 0;
 
 	va_start(args, format);
 
-	/* Loop over format string */
-	for (i = 0; format[i] != '\0'; i++)
-	{
-		/* If '%' is encountered, parse the conversion specifier */
-		if (format[i] == '%')
-		{
-			i++;
-
-			/* Handle conversion specifier */
-			switch (format[i])
-			{
-				case 'c':
-					char_arg = va_arg(args, int);
-					putchar(char_arg);
+	while (*format != '\0') {
+		if (*format == '%') {
+			format++; // move past the '%'
+			if (*format == 'c') {
+				int c = va_arg(args, int);
+				putchar(c);
+				count++;
+			} else if (*format == 's') {
+				char *s = va_arg(args, char*);
+				while (*s != '\0') {
+					putchar(*s);
+					s++;
 					count++;
-					break;
-				case 's':
-					str_arg = va_arg(args, char *);
-					while (*str_arg != '\0')
-					{
-						putchar(*str_arg);
-						str_arg++;
-						count++;
-					}
-					break;
-				case '%':
-					putchar('%');
-					count++;
-					break;
-				default:
-					putchar('%');
-					putchar(format[i]);
-					count += 2;
-					break;
+				}
+			} else if (*format == '%') {
+				putchar('%');
+				count++;
 			}
-		}
-		else
-		{
-			/* Print literal character */
-			putchar(format[i]);
+		} else if (*format == '\n') {
+			putchar('\n'); // print newline character
+			putchar('\r'); // move cursor to beginning of next line
+			count++;
+		} else {
+			putchar(*format);
 			count++;
 		}
+		format++;
 	}
 
 	va_end(args);
