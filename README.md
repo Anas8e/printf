@@ -49,3 +49,12 @@ Handle the precision for non-custom conversion specifiers.
 
 ### 11. Handle more flags
 Handle the 0 flag character for non-custom conversion specifiers.
+
+
+### 12. Hande \- flag
+Handle the - flag character for non-custom conversion specifiers.
+
+### 13. Handle custom conversion
+Handle the following custom conversion specifier:
+
+- r : prints the reversed string
