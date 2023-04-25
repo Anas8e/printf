@@ -16,3 +16,10 @@ This is a team project for ALx in which we make a replica of the printf function
 
 ### 2. Handle the binary format
 - b : converts input into binary
+
+### 3. Handle even more formats
+- u : converts input into unsinged integer
+- o : converts input into octal
+- x : converts input into hexdecimal with small letters
+- X : converts input into hexdecimal with capital letters
+
