@@ -63,3 +63,6 @@ Handle the following custom conversion specifier:
 Handle the following custom conversion specifier:
 
 - R: prints the rot13'ed string
+
+### 15. Test everything
+Make sure everything is working properly.
