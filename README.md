@@ -44,3 +44,8 @@ create a buffer of size 1024 to reduce the number of calls to write
 ### 9. Handle non-custom conversion
 Handle the field width for non-custom conversion specifiers.
 
+### 10. Handle more non-custom conversion
+Handle the precision for non-custom conversion specifiers.
+
+### 11. Handle more flags
+Handle the 0 flag character for non-custom conversion specifiers.
