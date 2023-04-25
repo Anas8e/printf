@@ -12,4 +12,7 @@ This is a team project for ALx in which we make a replica of the printf function
 
 ### 1. Handle more formats
  - d : converts input into a base 10 integer
- - i : converts input into an integer 
+ - i : converts input into an integer
+
+### 2. Handle the binary format
+- b : converts input into binary
