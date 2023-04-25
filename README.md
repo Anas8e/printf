@@ -36,3 +36,11 @@ create a buffer of size 1024 to reduce the number of calls to write
 - \+ : adds a \+ in front of signed positive integers
 - space : adds space in front of integers
 - \# : adds a 0 in front of octal conversions that don't begin with one
+
+### 8. handle some other formats
+- l : converts d, i, u, o, x, X conversions in short signed or unsigned ints
+- h : converts d, i, u, o, x, X conversions in long signed or unsigned ints
+
+### 9. Handle non-custom conversion
+Handle the field width for non-custom conversion specifiers.
+
