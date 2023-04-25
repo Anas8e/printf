@@ -27,6 +27,12 @@ This is a team project for ALx in which we make a replica of the printf function
 create a buffer of size 1024 to reduce the number of calls to write
 
 ### 5. Handle more and more formats
-
 - S : converts input into string
 
+### 6. Handle other formats
+- p : prints address
+
+### 7. Handle Flags
+- \+ : adds a \+ in front of signed positive integers
+- space : adds space in front of integers
+- \# : adds a 0 in front of octal conversions that don't begin with one
