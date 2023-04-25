@@ -23,3 +23,10 @@ This is a team project for ALx in which we make a replica of the printf function
 - x : converts input into hexdecimal with small letters
 - X : converts input into hexdecimal with capital letters
 
+### 4. Create a buffer
+create a buffer of size 1024 to reduce the number of calls to write
+
+### 5. Handle more and more formats
+
+- S : converts input into string
+
